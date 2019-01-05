@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Голик Валерія</title>
+  <style>
+    .alcls {
+        margin: 80px auto;
+        border: 25px solid #333;
+        border-collapse: collapse;
+    }
+    .cells {
+        width: 70px; height: 70px;
+        border: 2px solid #333;
+        }
+    .cells-wh {
+        width: 70px; height: 70px;
+        border: 2px solid #333;
+        background: rgb(235,228,214); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(235,228,214,1) 0%, rgba(231,218,190,1) 51%, rgba(208,196,173,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        }
+      .cells-wh-1 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background: rgb(235,228,214); /* Old browsers */
+        background-image: url(images/chess/images/desc_08.gif), linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        background-size: cover;
+      }
+      .cells-wh-8 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background-image: url(images/chess/images/desc_08.gif);
+        background-size: cover;
+      }
+      .cells-wh-2 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background: rgb(235,228,214); /* Old browsers */
+        background-image: url(images/chess/images/desc_13.gif), linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        background-size: cover;
+      }
+      .cells-wh-17 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background-image: url(images/chess/images/desc_06.gif);
+        background-size: cover;
+      }
+       .cells-wh-23 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background: rgb(235,228,214); /* Old browsers */
+        background-image: url(images/chess/images/desc_02.gif), linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        background-size: cover;
+      }
+      .cells-wh-7 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background-image: url(images/chess/images/desc_09.gif);
+        background-size: cover;
+      }
+       .cells-wh-16 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background: rgb(235,228,214); /* Old browsers */
+        background-image: url(images/chess/images/desc_01.png), linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        background-size: cover;
+      }
+      .cells-wh-24 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background-image: url(images/chess/images/desc_01.png);
+        background-size: cover;
+      }
+      .cells-wh-3 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background: rgb(235,228,214); /* Old browsers */
+        background-image: url(images/chess/images/desc_10.gif), linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        background-size: cover;
+      }
+      .cells-wh-6 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background-image: url(images/chess/images/desc_10.gif);
+        background-size: cover;
+      }
+      .cells-wh-18 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background: rgb(235,228,214); /* Old browsers */
+        background-image: url(images/chess/images/desc_03.gif), linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        background-size: cover;
+      }
+      .cells-wh-22 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background-image: url(images/chess/images/desc_03.gif);
+        background-size: cover;
+      }
+       .cells-wh-4 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background: rgb(235,228,214); /* Old browsers */
+        background-image: url(images/chess/images/desc_12.gif), linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        background-size: cover;
+      }
+      .cells-wh-5 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background-image: url(images/chess/images/desc_11.gif);
+        background-size: cover;
+      }
+       .cells-wh-19 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background: rgb(235,228,214); /* Old browsers */
+        background-image: url(images/chess/images/desc_04.gif), linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        background-size: cover;
+      }
+      .cells-wh-21 {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background-image: url(images/chess/images/desc_05.gif);
+        background-size: cover;
+      }
+      .cells-pshd-ll {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background-image: url(images/chess/images/desc_14.gif);
+        background-size: cover;
+      }
+      .cells-pshd-wh {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background: rgb(235,228,214); /* Old browsers */
+        background-image: url(images/chess/images/desc_14.gif), linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        background-size: cover;
+      }
+      .cells-pshw-ll {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background-image: url(images/chess/images/desc_07.gif);
+        background-size: cover;
+      }
+      .cells-pshw-wh {
+        width: 70px; height: 70px;
+        border: 2px solid #333; 
+        background: rgb(235,228,214); /* Old browsers */
+        background-image: url(images/chess/images/desc_07.gif), linear-gradient(to bottom, rgba(235,228,214,1) 0%,rgba(231,218,190,1) 51%,rgba(208,196,173,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe4d6', endColorstr='#d0c4ad',GradientType=0 ); /* IE6-9 */
+        background-size: cover;
+      }
+    .structure {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 100px;
+      left: 200px;
+          }
+    .desc {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+          }
+    .position {
+      width: 1000px;
+      height: 1000px;
+      position: relative;
+      left: 20%;
+          }
+  </style>
+ </head>
+ <body>
+<div class="position">
+    <div class="structure">
+    <img src="images/wood.jpg" width="615" height="600")>
+    </div>
+        <div class="desc">
+             <table class="alcls">
+            <tr class="cells">
+                <td class="cells-wh-1"></td>
+                <td class="cells-wh-7"></td>
+                <td class="cells-wh-3"></td>
+                <td class="cells-wh-5"></td>
+                <td class="cells-wh-4"></td>
+                <td class="cells-wh-6"></td>
+                <td class="cells-wh-2"></td>
+                <td class="cells-wh-8"></td>
+            </tr>
+            <tr class="cells">
+                <td class="cells-pshd-ll"></td>
+                <td class="cells-pshd-wh"></td>
+                <td class="cells-pshd-ll"></td>
+                <td class="cells-pshd-wh"></td>
+                <td class="cells-pshd-ll"></td>
+                <td class="cells-pshd-wh"></td>
+                <td class="cells-pshd-ll"></td>
+                <td class="cells-pshd-wh"></td>
+            </tr>
+            <tr class="cells">
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+            </tr>
+            <tr class="cells">
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+            </tr>
+            <tr class="cells">
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+            </tr>
+            <tr class="cells">
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+                <td class="cells"></td>
+                <td class="cells-wh"></td>
+            </tr>
+            <tr class="cells">
+                <td class="cells-pshw-wh"></td>
+                <td class="cells-pshw-ll"></td>
+                <td class="cells-pshw-wh"></td>
+                <td class="cells-pshw-ll"></td>
+                <td class="cells-pshw-wh"></td>
+                <td class="cells-pshw-ll"></td>
+                <td class="cells-pshw-wh"></td>
+                <td class="cells-pshw-ll"></td>
+            </tr>
+            <tr class="cells">
+                <td class="cells-wh-24"></td>
+                <td class="cells-wh-23"></td>
+                <td class="cells-wh-22"></td>
+                <td class="cells-wh-19"></td>
+                <td class="cells-wh-21"></td>
+                <td class="cells-wh-18"></td>
+                <td class="cells-wh-17"></td>
+                <td class="cells-wh-16"></td>
+            </tr>
+         </table>
+        </div>
+</div>
+</body>
+</html>

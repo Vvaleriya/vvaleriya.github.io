@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+ <head>
+  <meta charset="utf-8">
+  <title>Голик Валерія</title>
+  <style>
+  body {
+  background-color: LavenderBlush;
+  }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+#pagewrap {
+   width: 980px;
+   margin: 0 auto;
+}
+#main-nav {
+background-color: red;
+}
+#header {
+   height: 160px;
+}
+#content {
+   width: 600px;
+   float: left;
+}
+#sidebar {
+   width: 280px;
+   float: right;
+}
+#footer {
+   clear: both;
+}
+@media screen and (max-width: 980px) {
+   body {
+   background-color:PapayaWhip;
+   }
+   #site-logo {
+   color: red;
+   font-size: 33px;
+   font-family: "segoe script";
+   }
+    #site-description {
+   {
+   color: blue;
+   font-family: "segoe print";
+   }
+   #pagewrap {
+      width: 95%;
+   }
+   #content {
+      width: 60%;
+      padding: 3% 4%;
+   }
+   
+   #sidebar {
+      width: 30%;
+   }
+   #sidebar .widget {
+      padding: 8% 7%;
+      margin-bottom: 10px;
+   }
+}
+
+  </style>
+ </head>
+ <body>
+     <div id="pagewrap">
+   <header id="header">
+      <hgroup>
+         <h1 id="site-logo">Demo</h1>
+         <h2 id="site-description">Site Description</h2>
+      </hgroup>
+      <nav>
+         <ul id="main-nav">
+            <li>Home</li>
+         </ul>
+      </nav>
+      <form id="searchform">
+         <input type="search">
+      </form>
+   </header>
+   <div id="content">
+      <article class="post">
+         <p>blog post</p>
+      </article>
+   </div>
+   <aside id="sidebar">
+      <section class="widget">
+          <p>widget</p>
+      </section>              
+   </aside>
+   <footer id="footer">
+      <p>footer</p>
+   </footer>
+</div>
+</body>
+</html>
