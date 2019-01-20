@@ -209,7 +209,7 @@ body {
         height: 500px;
     }
     body {
-        background: url(../images/back.png) no-repeat center center;
+        background: url(../images/back.png) no-repeat center center rgb(243,226,183) ;
     background-size: 340%;
     background-attachment: fixed;
     }
