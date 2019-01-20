@@ -14,7 +14,7 @@ text-align: center;
 
 
 
-@media screen and (min-width: 768px ) and (max-width: 1024px) {
+@media (min-width: 768px ) and (max-width: 1024px) {
 
 .div-adapt {
 }
@@ -23,12 +23,30 @@ text-align: center;
 }
 }
 
+@media screen and (max-width: 768px) {
+.div-adapt {
+	display: flex;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.div-adapt img {
+	width:100px;
+    height: 100px;
+}
+}
+
 @media screen and (max-device-width: 768px) {
 .div-adapt {
 	display: flex;
-	flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 .div-adapt img {
-	width:50%;
+	width:500px;
+    height: 500px;
 }
 }
