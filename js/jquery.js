@@ -73,5 +73,25 @@ $('.myButton1').click(function() {
     $('#btn4').animate({ 'width': '300px', 'left':'25%', 'height':'100px','font-size':'38px', 'padding-top':'50px'},800, function(){document.location="adapt.html";}) }, 2800);
 }); 
     
+    //пятая кнопка
+    $('#btn5').click(function() {
+  $('.myButton1').animate({opacity: '0', 'margin-left': '1500px'},2000)  ;
+    $('.myButton').animate({opacity: '0', 'margin-left': '1500px'},2000)  ;
+        $('#btn3').animate({opacity: '0', 'margin-left': '1500px'},2000)  ;
+        $('#btn4').animate({opacity: '0', 'margin-left': '1500px'},2000)  ;
+    $('#btn5').animate({ 'margin-top': '600px'},2000)  ;
+    $('header').animate({ 'top': '200px'},2000)  ;
+    //2 etap ya sha umru
+    $('.divv').animate({ 'height': '600px', 'width':'800px','left':'88px' },2000);
+    $('.divv').css({'background': 'url(images/done1.gif) no-repeat center', 'background-size': '800px'});
+    //3tiy 
+         setTimeout(function () {
+    $('#btn5').animate({ 'margin-left': '200px', 'margin-top':'100px'},100)  ;
+     $('#btn5').css({ 'position': 'absolute','left':'200px','top':'20px'},2000) ;
+    $('.divv').animate({opacity: 0}, 300);
+              $('#btn5').css({ 'top':'100px'},2000) ;
+    $('#btn5').animate({ 'width': '300px', 'left':'25%', 'height':'100px','font-size':'38px', 'padding-top':'50px'},800, function(){document.location="Bootstrap.html";}) }, 2800);
+}); 
+    
 });
 
