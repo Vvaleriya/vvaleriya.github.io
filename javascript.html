@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+ <head>
+  <meta charset="utf-8">
+  <title>Валерія</title>
+     <link href="css/style.css" rel="stylesheet">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+     <script src="js/jquery.maskedinput.js"></script>
+     <script type="text/javascript">
+   jQuery(function($){
+   $("#phone").mask("+38(999) 999-9999");
+   });
+         
+function someFunc(){
+var Win = window.open('about:blank', 'example', 'width=800,height=600,top=20,left=200');
+    Win.document.write("<p align='center'>Прізвище: ", document.getElementById("firstname").value, "</p>");
+    Win.document.write("<p align='center'>Ім`я: ", document.getElementById("secondname").value, "</p>");
+    Win.document.write("<p align='center'>По батькові: ", document.getElementById("fathname").value, "</p>");
+    Win.document.write("<p align='center'>Дата народження: ", document.getElementById("calendar").value, "</p>");
+    Win.document.write("<p align='center'>Адреса: ", document.getElementById("adres").value, "</p>");
+    Win.document.write("<p align='center'>Номер телефону: ", document.getElementById("phone").value, "</p>");
+    Win.document.write("<p align='center'>Стать: ", document.getElementById("floor").value, "</p>");
+    Win.document.write("<p align='center'>Середня оцінка з математики: ", document.getElementById("name1").value, "</p>");
+    Win.document.write("<p align='center'>Середня оцінка з укр. мови: ", document.getElementById("name2").value, "</p>");
+    Win.document.write("<p align='center'>Фото: ", document.getElementById("pict").value, "</p>");
+    Win.document.write("<p align='center'>Мешканець міста? (on = так, off = ні): ", document.getElementById("mist").value, "</p>");
+}
+         
+document.getElementById("btn13").onclick = someFunc;
+</script>
+  </head>
+ <body>
+     
+     <div class="licc">
+         <h1>Ласкаво просимо у ліцейну родину!</h1>
+     <div class="lic">
+    <p><label>Надрукуйте Ваше прізвище:</label><input type="text" id="firstname"></p>
+         <p><label>Надрукуйте Ваше ім`я:</label><input type="text" id="secondname"></p>
+         <p><label>Надрукуйте ім`я по батькові:</label><input type="text" id="fathname"></p>
+         <p><label>Оберіть день народження</label><input type="date" id="calendar"  min="2001-01-01" max="2008-12-31"></p>
+         <p><label>Ваша адреса:</label><input type="text" id="adres"></p>
+         <p><label>Ваш номер телефону:</label><input type="text" id="phone" name="phone" ></p>
+         <p><label>Cередня оцінка з матем.:</label><input type="text" id="name1"></p>
+         <p><label>Cередня оцінка з укр. мови:</label><input type="text" id="name2"></p>
+        <p><label>Мешканець міста</label> <input type="checkbox" id="mist"></p>
+         <p><select id="floor" size="5">
+    <option disabled>Оберіть Вашу стать</option>
+    <option value="lgbt">Agender</option>
+    <option value="lgbt">Androgyne</option>
+    <option value="lgbt">Androgynous</option>
+    <option value="lgbt">Bigender</option>
+    <option value="lgbt">Cis</option>
+    <option value="lgbt">Cisgender</option>
+    <option value="lgbt">Non-binary</option>
+    <option value="lgbt">Pangender</option>
+    <option value="lgbt">Trans</option>
+    <option value="lgbt">Trans Female</option>
+    <option value="lgbt">Trans Male</option>
+    <option value="lgbt">Trans Person</option>
+    <option value="lgbt">Trans Woman</option>
+    <option value="lgbt">Trans(asterisk)</option>
+    <option value="lgbt">Trans(asterisk)Female</option>
+    <option value="lgbt">Trans(asterisk)Male</option>
+    <option value="lgbt">Trans(asterisk)Man</option>
+    <option value="lgbt">Trans(asterisk)Person</option>
+    <option value="lgbt">Trans(asterisk)Woman</option>
+    <option value="lgbt">Transexual</option>
+    <option value="lgbt">Transexual Female </option>
+    <option value="lgbt">Transexual Male</option>
+    <option value="lgbt">Transexual Man</option>
+    <option value="lgbt">Transexual Person</option>
+    <option value="lgbt">Transexual Woman</option>
+    <option value="lgbt">Transgender Female</option>
+    <option value="lgbt">Transgender Male</option>
+    <option value="lgbt">Transgender Man</option>
+    <option value="lgbt">Transgender Person</option>
+    <option value="lgbt">Transgender Woman</option>
+    <option value="lgbt">Transmasculine</option>
+    <option value="lgbt">Two-spirit</option>
+    <option value="Жінка">Female</option>
+    <option value="Чоловік">Male</option>
+   </select></p>
+    <p><label>Ваше фото:</label> <input type="file" id="pict"><p>
+    <input class="myButtonn" id="btn13" type="button" value="Підтвердити" onclick="someFunc()">
+     </div>
+     </div>
+     
+     <footer>
+     </footer>
+     
+</body>
+</html>
