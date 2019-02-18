@@ -118,7 +118,7 @@ $('.myButton1').click(function() {
      $('#btn6').css({ 'position': 'absolute','left':'200px','top':'20px'},2000) ;
     $('.divv').animate({opacity: 0}, 300);
               $('#btn6').css({ 'top':'100px'},2000) ;
-    $('#btn6').animate({ 'width': '300px', 'left':'25%', 'height':'100px','font-size':'38px', 'padding-top':'50px'},800, function(){document.location="Javascript.html";}) }, 2800);
+    $('#btn6').animate({ 'width': '300px', 'left':'25%', 'height':'100px','font-size':'38px', 'padding-top':'50px'},800, function(){document.location="javascript.html";}) }, 2800);
 }); 
     
 });
