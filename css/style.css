@@ -208,7 +208,7 @@ nav {
     cursor: url("../images/344.cur"), auto;
     width: 650px;
     margin-top: 220px;
-    height: 360px;
+    height: 400px;
     display: -webkit-flex; /* Safari */
     display: flex;
     -webkit-flex-direction: column; /* Safari */
