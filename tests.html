@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+ <head>
+  <meta charset="utf-8">
+  <title>Валерія</title>
+     <link href="css/style.css" rel="stylesheet">
+     <script type="text/javascript">
+        function check() {
+		var i=0;
+		if(document.test.vopr0.value=="AutoHotKey") i++;
+        if(document.test.vopr0.value=="Auto Hot Key") i++;
+		if(document.test.vopr1[1].checked) i++;
+		if(!document.test.vopr2[0].checked && document.test. vopr2[1].checked && document.test.vopr2[2].checked) i++;
+		if(document.test.vopr3.value=="2") i++;
+        if(document.test.vopr4.value=="Click, 457, 15") i++;
+        if(document.test.vopr4.value=="Click,457,15") i++;
+        if(document.test.vopr5.value=="1") i++;
+        if(!document.test.vopr6[2].checked && document.test. vopr6[0].checked && document.test.vopr6[1].checked) i++;   
+        if(document.test.vopr7[0].checked) i++;
+		if (i>4) {document.getElementById("points").innerHTML="<h1>Ваша оцінка: <font color='LightGreen	'><font size='17px'>"+i+"/8</font></h1>"} else  {document.getElementById("points").innerHTML="<h1>Ваша оцінка: <font color='LightCoral'><font size='17px'>"+i+"/8</font></h1>"};
+        }
+</script>
+  </head>
+ <body>
+     <div class="licc">
+         <h1>Готові перевірити знання?</h1>
+     <div class="lic">
+<form name="test">
+    
+    <p>Яка повна розшифровка абревіатури "AHK"?</p>
+<input type="text" name="vopr0">
+    
+    <p>Для чого НЕ призначен набір скриптів AHK? </p>
+<input type="radio" name="vopr1">Швидке тестування коду перед реалізацією його іншою мовою програмування<br>
+<input type="radio" name="vopr1">Створення власної середи розробки 3D-віджетів<br>
+<input type="radio" name="vopr1">Автоматичне нагадування, сканування системи або резервне копіювання за розкладом<br>
+    
+    
+    <p>Як можна обозначити клавішу "Пробіл"?</p>
+<input type="checkbox" name="vopr2">Area<br>
+<input type="checkbox" name="vopr2">sc39<br>
+<input type="checkbox" name="vopr2">Space<p>
+    
+    <p>Автоматизувати роботу з яким браузером можливо?</p>
+<select name="vopr3">
+<option value="0"> Google Chrome
+<option value="1"> Opera
+<option value="2"> Internet Explorer
+</select>
+    
+<p>Як правильно записати команду для кліка по координатам: x=457, y=15?</p>
+<input type="text" name="vopr4">
+    
+    <p>Команда для затримки виконання алгоритму</p>
+<select name="vopr5">
+<option value="0"> Pause(ms)
+<option value="1"> Sleep
+<option value="2"> Come
+<option value="3"> Wait (ms)
+</select>
+    
+<p>Які строки з командою коректні для початку цикла? </p>
+<input type="checkbox" name="vopr6">Loop<br>
+<input type="checkbox" name="vopr6">If<br>
+<input type="checkbox" name="vopr6">CicleSt<p>
+    
+    <p>Команда для перенесення дій алкгоритму на "якірець" з ім'ям "MyLabel":</p>
+<input type="radio" name="vopr7">Goto, MyLabel<br>
+<input type="radio" name="vopr7">Goto(MyLabel)<br>
+<input type="radio" name="vopr7">Goto:="MyLabel"<br>
+    <p></p>
+    <input type="button" class="myButtonn" value="Перевірити" onclick="check()">
+    <span id="points"></span>
+</form>
+         
+     </div>
+     </div>
+     
+     <footer>
+     </footer>
+     
+</body>
+</html>
