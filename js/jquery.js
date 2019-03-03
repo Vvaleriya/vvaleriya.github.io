@@ -45,8 +45,8 @@ $('.myButton1').click(function() {
     $('#btn4').animate({opacity: '0', 'margin-left': '1500px'},2000)  ;
     $('#btn5').animate({opacity: '0', 'margin-left': '1500px'},2000)  ;
     $('#btn6').animate({opacity: '0', 'margin-left': '1500px'},2000)  ;
+    $('#btn7').animate({opacity: '0', 'margin-left': '1500px'},2000)  ;
     $('#btn3').animate({ 'margin-top': '600px'},2000)  ;
-    $('#btn7').animate({ 'margin-top': '600px'},2000)  ;
     $('header').animate({ 'top': '200px'},2000)  ;
     //2 etap ya sha umru
     $('.divv').animate({ 'height': '600px', 'width':'800px','left':'88px' },2000);
