@@ -10,9 +10,13 @@
    jQuery(function($){
    $("#phone").mask("+38(999) 999-9999");
    });
-         
+       
 function someFunc(){
-var Win = window.open('about:blank', 'example', 'width=800,height=600,top=20,left=200');
+var mat = document.getElementById("name1").value;
+var ukr = document.getElementById("name2").value;
+    var sssuma = (Number(mat) + Number(ukr)) /2;
+    
+    var Win = window.open('about:blank', 'example', 'width=800,height=600,top=20,left=200');
     Win.document.write("<p align='center'>Прізвище: ", document.getElementById("firstname").value, "</p>");
     Win.document.write("<p align='center'>Ім`я: ", document.getElementById("secondname").value, "</p>");
     Win.document.write("<p align='center'>По батькові: ", document.getElementById("fathname").value, "</p>");
@@ -20,12 +24,12 @@ var Win = window.open('about:blank', 'example', 'width=800,height=600,top=20,lef
     Win.document.write("<p align='center'>Адреса: ", document.getElementById("adres").value, "</p>");
     Win.document.write("<p align='center'>Номер телефону: ", document.getElementById("phone").value, "</p>");
     Win.document.write("<p align='center'>Стать: ", document.getElementById("floor").value, "</p>");
-    Win.document.write("<p align='center'>Середня оцінка з математики: ", document.getElementById("name1").value, "</p>");
-    Win.document.write("<p align='center'>Середня оцінка з укр. мови: ", document.getElementById("name2").value, "</p>");
+    Win.document.write("<p align='center'>Оцінка з математики: ", document.getElementById("name1").value, "</p>");
+    Win.document.write("<p align='center'>Оцінка з укр. мови: ", document.getElementById("name2").value, "</p>");
+    Win.document.write("<p align='center'>Середня оцінка: ", sssuma, "</p>");
     Win.document.write("<p align='center'>Фото: ", document.getElementById("pict").value, "</p>");
-    Win.document.write("<p align='center'>Мешканець міста? (on = так, off = ні): ", document.getElementById("mist").value, "</p>");
-}
-         
+    Win.document.write("<p align='center'>Мешканець міста? (on = так, off = ні): ", document.getElementById("mist").value,  "</p>");
+ }
 document.getElementById("btn13").onclick = someFunc;
 </script>
   </head>
@@ -42,7 +46,7 @@ document.getElementById("btn13").onclick = someFunc;
          <p><label>Ваш номер телефону:</label><input type="text" id="phone" name="phone" ></p>
          <p><label>Cередня оцінка з матем.:</label><input type="text" id="name1"></p>
          <p><label>Cередня оцінка з укр. мови:</label><input type="text" id="name2"></p>
-        <p><label>Мешканець міста</label> <input type="checkbox" id="mist"></p>
+        <p><label>Мешканець міста</label><input type="checkbox" id="mist"></p>
          <p><select id="floor" size="5">
     <option disabled>Оберіть Вашу стать</option>
     <option value="lgbt">Agender</option>
@@ -82,6 +86,7 @@ document.getElementById("btn13").onclick = someFunc;
    </select></p>
     <p><label>Ваше фото:</label> <input type="file" id="pict"><p>
     <input class="myButtonn" id="btn13" type="button" value="Підтвердити" onclick="someFunc()">
+    <input class="myButtonn" id="btn13" type="button" value="Закрити" onclick="Win.close()">
      </div>
      </div>
      
