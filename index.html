@@ -1,30 +1,149 @@
-﻿<!DOCTYPE html>
-<html lang="uk">
- <head>
-  <meta charset="utf-8">
-  <title>Валерія</title>
-     <link href="css/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/jquery.js"></script>
-  </head>
- <body>
-     
-     <header>
-         <div class="divv"></div>
-     </header>
-     
-     <nav class="nav">
-         <div><a class="myButton1">Флееекс</a></div>
-         <div><a href="#" class="myButton">Гра (у розробці)</a></div>
-         <div><a href="#" class="myButton3" id="btn3">Медіазапити</a></div>
-         <div><a href="#" class="myButton3" id="btn4">Чотири фото </a></div>
-         <div><a href="#" class="myButton3" id="btn5">Bootstrap</a></div>
-         <div><a href="#" class="myButton3" id="btn6">JavaScript</a></div>
-         <div><a href="#" class="myButton3" id="btn7">Testssssss</a></div>
-     </nav>
-     
-     <footer>
-     </footer>
-     
-</body>
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Метрологія</title>
+        <style>
+            h3 {
+                color:aliceblue;
+            }
+            .floating-button {
+              text-decoration: none;
+              display: inline-block;
+              width: 140px;
+              height: 45px;
+              line-height: 45px;
+              border-radius: 45px;
+              margin: 10px 20px;
+                margin-left: 20%;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 11px;
+              text-transform: uppercase;
+              text-align: center;
+              letter-spacing: 3px;
+              font-weight: 600;
+              color: #524f4e;
+              background: white;
+              box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+              transition: .3s;
+            }
+            .floating-button:hover {
+              background: skyblue;
+              box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+              color: white;
+              transform: translateY(-7px);
+            }
+        
+            body {
+                background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+            }
+            p {
+                color:white;
+                font-size: 15pt;
+                margin-left: 20%;
+                margin-top: 6%;
+                font-family: Courier New, monospace;
+                font-weight: 300;
+                font-variant: small-caps;
+            }
+        </style>
+    </head>
+    <body>
+        <p><b>238 235 240 233 237 <br><br>
+                p = 0.8 <br>
+                n = 5 </b></p>
+         <input type="button"  href="" class="floating-button" onclick="resultt()" value="Порахувати">
+        
+        <p>Сер. арифм.: <i id="1"></i> </p>
+        <p>Середнє кв. відхилення: <i id="2"> </i></p>
+        <p>Оцінка СКВ: <i id="3"></i></p>
+        <p>Оцінка довір.границі похибки <i id="4"></i></p>
+        <h3 align="right"><i>made by Holyk Valeriia and Dana Lavreniuk
+                
+		<script type="text/javascript">
+            
+            var arr1 = ["238", "235", "240", "233", "237"];
+            var arr2 = [];
+            var arr3 = [];
+            var p = 0.8;
+            
+            var t_p = AStudentT(p, (arr1.length - 1));
+            
+            {
+            var sum1 = 0;
+            for(var i=0;i<arr1.length;i++){
+                sum1 = sum1 + parseInt(arr1[i]);
+            }
+            }
+            
+            var average_1 = sum1 / arr1.length;
+            
+            for (var j of arr1) {
+                var a = j - average_1;
+                arr2.push(a);
+                arr3.push(Math.pow(a,2));
+            }
+            
+                
+            {
+            var sum3 = 0;
+            for(var k=0;k<arr3.length;k++){
+                sum3 = sum3 + parseInt(arr3[k]);
+            }
+            }
+            
+            var average_3 = sum3 / (arr3.length - 1);
+            var aver_square = Math.pow(average_3, 0.5);
+                                        
+            var SKV = aver_square / Math.pow((arr1.length), 0.5);
+            var conf_limit = p * SKV;
+            
+            // Ниже просто часть для записи полученных результатов в html
+            
+            var text_1 = document.getElementById('1');
+            var text_2 = document.getElementById('2');
+            var text_3 = document.getElementById('3');
+            var text_4 = document.getElementById('4');
+              
+            function resultt() {
+            text_1.innerHTML = average_1;
+            text_2.innerHTML = aver_square;
+            text_3.innerHTML = SKV;
+            text_4.innerHTML = conf_limit;
+            }
+
+            
+            // Ниже код не мой, это с интернета адаптация модуля по нахождению t-критерия Стьюдента
+            
+            function StatCom(q,i,j,b)
+        {   
+            var zz = 1, z = zz, k = i;
+            while (k <= j){ zz *= (q*k)/(k-b); z += zz; k += 2; }
+            return z;
+        }
+
+        function StudentT(t,n)
+        {   
+            var w = Math.abs(t)/Math.sqrt(n), th = Math.atan(w);
+            if (n == 1) return ( 1-th/(Math.PI/2) );
+            var sth = Math.sin(th), cth = Math.cos(th);
+            if ((n%2) == 1) return ( 1-(th+sth*cth*StatCom(cth*cth,2,n-3,-1))/(Math.PI/2) );
+            else            return ( 1-sth*StatCom(cth*cth,1,n-3,-1) );
+        }
+
+        function AStudentT(n,alpha)  // Возвращает t-критерий Стьюдента по числу
+        {                            // степеней свободы n и уровню значимости alpha
+            var v = 0.5, dv = 0.5, t = 0;
+            while (dv > 1e-6)
+             { t = 1/v-1; dv /= 2;
+               if (StudentT(t,n) > alpha) v -= dv;
+               else v += dv; 
+             }
+            return t;
+        }
+        </script>
+        
+    </body>
 </html>
